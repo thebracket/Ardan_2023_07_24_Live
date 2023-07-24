@@ -1,6 +1,10 @@
+fn print(s: String) -> String {
+    println!("{s}");
+    s
+}
+
 fn main() {
-    let s1 = String::from("Hello");
-    let s2 = s1;
-    println!("s2 = {s2}");
-    println!("s1 = {s1}");
+    let s= "Hello".to_string();
+    let s2 = print(s);
+    println!("{s2}");
 }
