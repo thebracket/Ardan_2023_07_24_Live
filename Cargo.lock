@@ -39,6 +39,10 @@ name = "mutable_shared"
 version = "0.1.0"
 
 [[package]]
+name = "mutable_shared_atomic"
+version = "0.1.0"
+
+[[package]]
 name = "ownership_move"
 version = "0.1.0"
 

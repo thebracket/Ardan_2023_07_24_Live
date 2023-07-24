@@ -17,4 +17,5 @@ members = [
     "day1/reference_count",
     "day1/atomic_reference_count",
     "day1/mutable_shared",
+    "day1/mutable_shared_atomic",
 ]
