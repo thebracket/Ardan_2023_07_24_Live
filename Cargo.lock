@@ -35,6 +35,13 @@ name = "hello_world"
 version = "0.1.0"
 
 [[package]]
+name = "lazy"
+version = "0.1.0"
+dependencies = [
+ "once_cell",
+]
+
+[[package]]
 name = "mutable_shared"
 version = "0.1.0"
 
@@ -49,6 +56,12 @@ version = "0.1.0"
 [[package]]
 name = "mutable_sharing_rwlock"
 version = "0.1.0"
+
+[[package]]
+name = "once_cell"
+version = "1.18.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dd8b5dd2ae5ed71462c540258bedcb51965123ad7e7ccf4b9a8cafaa4a63576d"
 
 [[package]]
 name = "ownership_move"
