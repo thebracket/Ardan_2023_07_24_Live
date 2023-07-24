@@ -11,4 +11,5 @@ members = [
     "day1/ownership_move",
     "day1/dropping",
     "day1/cloning",
+    "day1/borrowing",
 ]
