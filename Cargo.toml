@@ -14,4 +14,5 @@ members = [
     "day1/borrowing",
     "day1/borrow_lifetimes",
     "day1/copyable",
+    "day1/reference_count",
 ]
