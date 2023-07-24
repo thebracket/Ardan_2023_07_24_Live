@@ -9,4 +9,5 @@ edition = "2021"
 members = [
     "day1/hello_world",
     "day1/ownership_move",
+    "day1/dropping",
 ]
