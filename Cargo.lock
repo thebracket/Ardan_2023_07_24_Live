@@ -31,6 +31,14 @@ name = "dropping"
 version = "0.1.0"
 
 [[package]]
+name = "generic_struct"
+version = "0.1.0"
+
+[[package]]
+name = "generics"
+version = "0.1.0"
+
+[[package]]
 name = "hello_world"
 version = "0.1.0"
 
@@ -55,6 +63,10 @@ version = "0.1.0"
 
 [[package]]
 name = "mutable_sharing_rwlock"
+version = "0.1.0"
+
+[[package]]
+name = "new_types"
 version = "0.1.0"
 
 [[package]]
