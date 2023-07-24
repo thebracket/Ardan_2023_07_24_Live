@@ -42,4 +42,9 @@ fn main() {
     dog.speak();
     speak_twice(&cat);
     let my_animal = get_animal();
+
+    let animals: Vec<Box<dyn Animal>> = vec![Box::new(Cat), Box::new(Dog)];
+    for animal in animals.iter() {
+        animal.speak();
+    }
 }
