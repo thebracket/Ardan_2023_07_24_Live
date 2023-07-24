@@ -15,4 +15,6 @@ members = [
     "day1/borrow_lifetimes",
     "day1/copyable",
     "day1/reference_count",
+    "day1/atomic_reference_count",
+    "day1/mutable_shared",
 ]
