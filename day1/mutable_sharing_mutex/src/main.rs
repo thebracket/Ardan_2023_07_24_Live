@@ -15,4 +15,18 @@ fn main() {
     });
     let lock = SHARED.lock().unwrap();
     println!("{}", *lock);
+
+    let lock = SHARED.lock().unwrap();
+    std::mem::drop(lock);
+    let lock2 = SHARED.lock().unwrap();
+
+
+    // do stuff
+    {
+        let lock = SHARED.lock().unwrap();
+        // do more stuff that needs the lock
+    }
+    // Do even more stuff
+    let lock2 = SHARED.lock().unwrap();
+    // One last lock
 }
