@@ -8,6 +8,7 @@ impl Data {
     fn new() -> Self {
         Self("Hello".to_string(), "World".to_string())
     }
+
 }
 
 impl Drop for Data {

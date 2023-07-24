@@ -21,4 +21,6 @@ members = [
     "day1/mutable_sharing_mutex",
     "day1/mutable_sharing_rwlock",
     "day1/lazy",
+    "day1/traits_demo",
+    "day1/simple_trait",
 ]
