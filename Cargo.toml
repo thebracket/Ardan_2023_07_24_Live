@@ -12,4 +12,5 @@ members = [
     "day1/dropping",
     "day1/cloning",
     "day1/borrowing",
+    "day1/borrow_lifetimes",
 ]
