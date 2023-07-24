@@ -2,6 +2,11 @@ use std::sync::Mutex;
 
 static SHARED: Mutex<String> = Mutex::new(String::new());
 
+fn poisoner() {
+    let mut lock = SHARED.lock().unwrap();
+    panic!("Something crashed");
+}
+
 fn main() {
     std::thread::scope(|scope| {
         for _ in 0..1000 {
@@ -10,16 +15,23 @@ fn main() {
                     let mut lock = SHARED.lock().unwrap();
                     *lock += "1";
                 }
+                poisoner();
             });
         }
     });
     let lock = SHARED.lock().unwrap();
     println!("{}", *lock);
 
-    let lock = SHARED.lock().unwrap();
+    let recovered_data = SHARED.lock().unwrap_or_else(|poisoned| {
+        println!("Mutex was poisoned, recovering data...");
+        poisoned.into_inner()
+    });
+    println!("Recovered data: {recovered_data:?}");
+
+    /*let lock = SHARED.lock().unwrap();
     std::mem::drop(lock);
     let lock2 = SHARED.lock().unwrap();
-
+    */
 
     // do stuff
     {
