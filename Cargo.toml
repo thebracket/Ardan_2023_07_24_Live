@@ -18,4 +18,5 @@ members = [
     "day1/atomic_reference_count",
     "day1/mutable_shared",
     "day1/mutable_shared_atomic",
+    "day1/mutable_sharing_mutex",
 ]
