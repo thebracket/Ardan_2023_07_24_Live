@@ -8,4 +8,5 @@ edition = "2021"
 [workspace]
 members = [
     "day1/hello_world",
+    "day1/ownership_move",
 ]
