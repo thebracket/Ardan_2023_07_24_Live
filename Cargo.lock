@@ -47,6 +47,10 @@ name = "mutable_sharing_mutex"
 version = "0.1.0"
 
 [[package]]
+name = "mutable_sharing_rwlock"
+version = "0.1.0"
+
+[[package]]
 name = "ownership_move"
 version = "0.1.0"
 
