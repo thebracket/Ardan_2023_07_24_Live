@@ -490,6 +490,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "tokio_blocking"
+version = "0.1.0"
+dependencies = [
+ "futures",
+ "tokio",
+]
+
+[[package]]
 name = "traits_demo"
 version = "0.1.0"
 
