@@ -92,7 +92,15 @@ name = "reference_count"
 version = "0.1.0"
 
 [[package]]
+name = "scoped_threads"
+version = "0.1.0"
+
+[[package]]
 name = "simple_trait"
+version = "0.1.0"
+
+[[package]]
+name = "thread_channels"
 version = "0.1.0"
 
 [[package]]
