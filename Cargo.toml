@@ -45,4 +45,5 @@ members = [
     "day2/axum_file_adapter",
     "day2/thumbnailer", # Example program to run
     "day2/external_process",
+    "day2/external_process_async",
 ]
