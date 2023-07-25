@@ -41,4 +41,5 @@ members = [
     "day2/web_service",
     "day2/line_count",
     "day2/line_count_memmap",
+    "day2/axum_file_stream",
 ]
