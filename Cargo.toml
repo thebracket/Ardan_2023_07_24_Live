@@ -30,4 +30,5 @@ members = [
 
     # Day 2: Threads & Async
     "day2/hello_threads",
+    "day2/divide_workload",
 ]
