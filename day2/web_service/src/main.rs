@@ -1,4 +1,4 @@
-use axum::{routing::get, Router};
+use axum::{routing::{get, post}, Router};
 use std::net::SocketAddr;
 use axum::response::Html;
 use serde::Serialize;
