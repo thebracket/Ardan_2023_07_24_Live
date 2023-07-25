@@ -34,4 +34,5 @@ members = [
     "day2/scoped_threads",
     "day2/thread_channels",
     "day2/hello_async_futures",
+    "day2/hello_tokio",
 ]
