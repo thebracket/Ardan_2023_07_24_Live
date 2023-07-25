@@ -38,4 +38,5 @@ members = [
     "day2/tokio_blocking",
     "day2/tokio_channels",
     "day2/tokio_with_threads",
+    "day2/web_service",
 ]
