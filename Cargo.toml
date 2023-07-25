@@ -7,6 +7,7 @@ edition = "2021"
 
 [workspace]
 members = [
+    # Day 1 - Ownership, Borrowing, Lifetimes, Arcs, Shared Data, Traits
     "day1/hello_world",
     "day1/ownership_move",
     "day1/dropping",
@@ -26,4 +27,7 @@ members = [
     "day1/generics",
     "day1/new_types",
     "day1/generic_struct",
+
+    # Day 2: Threads & Async
+    "day2/hello_threads",
 ]
