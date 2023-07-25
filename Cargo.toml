@@ -42,4 +42,5 @@ members = [
     "day2/line_count",
     "day2/line_count_memmap",
     "day2/axum_file_stream",
+    "day2/axum_file_adapter",
 ]
