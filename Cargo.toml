@@ -43,4 +43,6 @@ members = [
     "day2/line_count_memmap",
     "day2/axum_file_stream",
     "day2/axum_file_adapter",
+    "day2/thumbnailer", # Example program to run
+    "day2/external_process",
 ]
