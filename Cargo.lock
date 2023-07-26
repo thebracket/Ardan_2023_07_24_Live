@@ -2285,6 +2285,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "tokio_tracing"
+version = "0.1.0"
+dependencies = [
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+]
+
+[[package]]
 name = "tokio_with_threads"
 version = "0.1.0"
 dependencies = [

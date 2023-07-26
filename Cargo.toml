@@ -59,4 +59,5 @@ members = [
     "day3/pass_through_thiserror",
     "day3/errors_async",
     "day3/unit_tests",
+    "day3/tokio_tracing",
 ]
