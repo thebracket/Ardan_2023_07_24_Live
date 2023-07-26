@@ -1,4 +1,4 @@
-use sqlx::{Row, FromRow};
+use sqlx::{FromRow, Row};
 
 #[derive(Debug, FromRow)]
 struct Message {
@@ -19,6 +19,15 @@ async fn main() -> anyhow::Result<()> {
     let messages = sqlx::query_as::<_, Message>("SELECT * FROM messages")
         .fetch_all(&pool)
         .await?;
+
+    // Use a stream
+    println!("--- stream ---");
+    use futures::TryStreamExt;
+    let mut message_stream =
+        sqlx::query_as::<_, Message>("SELECT id, message FROM messages").fetch(&pool);
+    while let Some(message) = message_stream.try_next().await? {
+        println!("{message:?}");
+    }
 
     // Print the messages
     for message in messages {
