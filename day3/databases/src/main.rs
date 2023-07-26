@@ -1,4 +1,10 @@
-use sqlx::Row;
+use sqlx::{Row, FromRow};
+
+#[derive(Debug, FromRow)]
+struct Message {
+    id: i64,
+    message: String,
+}
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
@@ -10,18 +16,13 @@ async fn main() -> anyhow::Result<()> {
     let pool = sqlx::SqlitePool::connect(&db_url).await?;
 
     // Fetch the messages from the database
-    let messages = sqlx::query("SELECT id, message FROM messages")
-        .map(|row: sqlx::sqlite::SqliteRow| {
-            let id: i64 = row.get(0);
-            let message: String = row.get(1);
-            (id, message)
-        })
+    let messages = sqlx::query_as::<_, Message>("SELECT * FROM messages")
         .fetch_all(&pool)
         .await?;
 
     // Print the messages
-    for (id, message) in messages {
-        println!("{id}: {message}");
+    for message in messages {
+        println!("{message:?}");
     }
 
     Ok(())
