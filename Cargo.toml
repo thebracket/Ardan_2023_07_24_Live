@@ -50,4 +50,5 @@ members = [
     # Day 3: More external programs, databases, dependency injection,
     # error handling, tracing and benchmarking
     "day3/external_process2",
+    "day3/external_process_wait_or_kill",
 ]

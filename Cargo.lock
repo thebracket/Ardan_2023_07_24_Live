@@ -306,6 +306,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "external_process_wait_or_kill"
+version = "0.1.0"
+
+[[package]]
 name = "fdeflate"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
