@@ -57,4 +57,5 @@ members = [
     "day3/pass_through_errors",
     "day3/pass_through_anyhow",
     "day3/pass_through_thiserror",
+    "day3/errors_async",
 ]
