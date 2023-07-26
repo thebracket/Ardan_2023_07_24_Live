@@ -54,4 +54,7 @@ members = [
     "day3/databases",
     "day3/databases_axum",
     "day3/strong_errors",
+    "day3/pass_through_errors",
+    "day3/pass_through_anyhow",
+    "day3/pass_through_thiserror",
 ]

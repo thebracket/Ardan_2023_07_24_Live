@@ -1358,6 +1358,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "pass_through_anyhow"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "pass_through_errors"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "pass_through_thiserror"
+version = "0.1.0"
+
+[[package]]
 name = "paste"
 version = "1.0.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
