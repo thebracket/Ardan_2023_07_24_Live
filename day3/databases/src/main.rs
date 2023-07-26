@@ -6,6 +6,15 @@ struct Message {
     message: String,
 }
 
+async fn update_message(id: i64, message: &str, pool: &sqlx::SqlitePool) -> anyhow::Result<()> {
+    sqlx::query("UPDATE messages SET message = ? WHERE id = ?")
+        .bind(message)
+        .bind(id)
+        .execute(pool)
+        .await?;
+    Ok(())
+}
+
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     // Read the .env file and obtain the database URL
@@ -22,6 +31,8 @@ async fn main() -> anyhow::Result<()> {
     let messages = sqlx::query_as::<_, Message>("SELECT * FROM messages")
         .fetch_all(&pool)
         .await?;
+
+    update_message(4, "Updated Message", &pool).await?;
 
     // Use a stream
     println!("--- stream ---");
