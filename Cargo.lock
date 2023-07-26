@@ -295,6 +295,10 @@ name = "external_process"
 version = "0.1.0"
 
 [[package]]
+name = "external_process2"
+version = "0.1.0"
+
+[[package]]
 name = "external_process_async"
 version = "0.1.0"
 dependencies = [
