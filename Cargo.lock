@@ -397,6 +397,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "databases_axum"
+version = "0.1.0"
+dependencies = [
+ "axum",
+ "serde",
+ "sqlx",
+ "tokio",
+]
+
+[[package]]
 name = "der"
 version = "0.7.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"

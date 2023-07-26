@@ -52,4 +52,5 @@ members = [
     "day3/external_process2",
     "day3/external_process_wait_or_kill",
     "day3/databases",
+    "day3/databases_axum",
 ]
