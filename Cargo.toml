@@ -60,4 +60,5 @@ members = [
     "day3/errors_async",
     "day3/unit_tests",
     "day3/tokio_tracing",
+    "day3/axum_tracing",
 ]
