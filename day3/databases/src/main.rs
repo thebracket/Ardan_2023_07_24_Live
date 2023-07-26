@@ -21,8 +21,14 @@ async fn main() -> anyhow::Result<()> {
     dotenv::dotenv()?;
     let db_url = std::env::var("DATABASE_URL")?;
 
+    // Enable tracing
+    let subscriber = tracing_subscriber::FmtSubscriber::new();
+    tracing::subscriber::set_global_default(subscriber)?;
+    tracing::info!("Starting");
+
     // Get a database connection pool
-    let pool = sqlx::SqlitePool::connect(&db_url).await?;
+    let pool = sqlx::SqlitePool::connect(&db_url)
+        .await?;
 
     // Run Migrations
     sqlx::migrate!("./migrations").run(&pool).await?;
