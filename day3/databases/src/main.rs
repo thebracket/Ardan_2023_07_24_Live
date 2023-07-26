@@ -15,6 +15,9 @@ async fn main() -> anyhow::Result<()> {
     // Get a database connection pool
     let pool = sqlx::SqlitePool::connect(&db_url).await?;
 
+    // Run Migrations
+    sqlx::migrate!("./migrations").run(&pool).await?;
+
     // Fetch the messages from the database
     let messages = sqlx::query_as::<_, Message>("SELECT * FROM messages")
         .fetch_all(&pool)
