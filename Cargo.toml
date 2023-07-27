@@ -65,5 +65,6 @@ members = [
     "day3/bench_criterion",
 
     # Day 4: QA, Best Practices, Finishing Unit Testing
+    "day4/doctesting",
     "day4/stubbing",
 ]
