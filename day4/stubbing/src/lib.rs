@@ -6,7 +6,7 @@ mod stubbing {
     pub struct StubMe;
 
     impl StubMe {
-        pub fn new() {
+        pub fn new() -> Self {
             Self
         }
 
