@@ -63,4 +63,7 @@ members = [
     "day3/axum_tracing",
     "day3/simple_benchmark",
     "day3/bench_criterion",
+
+    # Day 4: QA, Best Practices, Finishing Unit Testing
+    "day4/stubbing",
 ]
