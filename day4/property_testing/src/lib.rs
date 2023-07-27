@@ -1,5 +1,5 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+pub fn is_email_valid(email: &str) -> bool {
+    !email.is_empty() && email.contains('@')
 }
 
 #[cfg(test)]
@@ -7,8 +7,12 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn test_random_email() {
+        use fake::faker::internet::en::SafeEmail;
+        use fake::Fake;
+
+        let email: String = SafeEmail().fake();
+        println!("{email}");
+        assert!(is_email_valid(&email));
     }
 }
