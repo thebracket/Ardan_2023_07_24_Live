@@ -68,4 +68,5 @@ members = [
     "day4/doctesting",
     "day4/stubbing",
     "day4/mocktesting",
+    "day4/property_testing",
 ]
